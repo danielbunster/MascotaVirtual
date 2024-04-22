@@ -2,6 +2,15 @@ import java.lang.reflect.Array;
 import java.util.Vector;
 
 public class Mascota {
+        /**
+        * @param nombre -> Nombre de la mascota
+        * @param edad -> Edad de la mascota
+        * @param salud -> Salud de la mascota [0-100]
+        * @param energia -> Energia de la mascota [0-100]
+        * @param felicidad -> Felicidad de la mascota [0-100]
+        * @param estado -> Estado de animo/situacion de la mascota
+        **/
+        //Atributos
         private String nombre;
         private int edad;
         private int salud;
@@ -9,6 +18,7 @@ public class Mascota {
         private int felicidad;
         private Estado estado;
 
+        //Constructor
         public Mascota(String nombre){
             this.nombre = nombre;
             this.edad = 0;
@@ -32,6 +42,7 @@ public class Mascota {
             this.felicidad = felicidad;
         }
 
+        //Metodos
         public void darItem(Item item){
             if (item instanceof Comida){
                 System.out.println("Dando de comer "+item.getNombre()+"...");
