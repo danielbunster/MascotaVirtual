@@ -1,4 +1,8 @@
 public enum Estado {
+    /**
+    * Definicion de todos los estados
+    * posibles de la mascorta virtual
+    **/
     Neutro("(-_-) Meh...."),
     Feliz("(^_^) Weeeeeh!"), 
     Triste("(._.) snif...."), 
