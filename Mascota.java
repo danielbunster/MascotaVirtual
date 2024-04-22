@@ -13,12 +13,12 @@ public class Mascota {
         * @param estado -> Estado de animo/situacion de la mascota
         **/
         //Atributos
-        private String nombre;
-        private int edad;
-        private int salud;
-        private int energia;
-        private int felicidad;
-        private Estado estado;
+        public String nombre;
+        public int edad;
+        public int salud;
+        public int energia;
+        public int felicidad;
+        public Estado estado;
 
         //Constructor
         public Mascota(String nombre){
