@@ -26,7 +26,7 @@ public class Main {
 
         //  ENTRADA MANUAL //
         /*
-        Mascota e = new Mascota("Garfield"); // Creamos al animal
+        Mascota e = new Mascota("Pollita"); // Creamos al animal
         Inventario inventario = new Inventario(); // Creamos su inventario
         Juguete pelota = new Juguete(1,4,"Pelota");
         Comida queso = new Comida(2,5,"Queso");
@@ -88,11 +88,11 @@ public class Main {
         float tiempo = 0;
         Scanner id = new Scanner(System.in);
         while(true){ // Condición de constante iteración
-            tiempo = tiempo + 0.5f; // Tiempo por cada iteración
-            e.edad = e.edad + 0.5f; 
-            e.salud = e.salud - 5;
-            e.energia= e.energia - 5;
-            e.felicidad = e.felicidad - 5;
+            tiempo = tiempo + 0.5f; // Tiempo por cada iteracion
+            e.edad = e.edad + 0.5f;
+            if (e.salud <=0){e.salud=0;} else if (e.salud <= 100) {e.salud = e.salud - 5;}
+            if (e.energia <=0){e.energia=0;} else if (e.energia <= 100) {e.energia = e.energia - 5;}
+            if (e.felicidad <=0){e.felicidad=0;} else if (e.felicidad <= 100) {e.felicidad = e.felicidad - 5;}
             //------------- Efecto del paso del tiempo en el animal----------//
             if(e.edad <= 5 & e.salud <= 10){
                 e.felicidad = e.felicidad - 20;
@@ -105,6 +105,11 @@ public class Main {
                 e.felicidad = e.felicidad - 30;
                 e.energia = e.energia - 20;
             }
+
+            if (e.felicidad <=0){e.felicidad=0;}
+            if (e.energia <=0){e.energia=0;}
+            if (e.salud <=0){e.salud=0;}
+
             //-------- Mostramos atributos -----------------------//
             System.out.print("\n");
             System.out.println("Tiempo simulado : " + tiempo);
@@ -116,11 +121,11 @@ public class Main {
             System.out.println("Energía: " + Integer.toString(e.energia));
             System.out.println("Felicidad: " + Integer.toString(e.felicidad));
             if (e.felicidad>=60){e.estado = Estado.Feliz;}
+            else if ((e.salud<=0 & e.energia<=0)||(e.edad>=15)){e.estado=Estado.Muerto;}
             else if (e.felicidad<=20){e.estado=Estado.Triste;}
             else if ((e.edad <=5 & e.salud<=20) || (e.edad>=5 & e.edad<=10 & e.salud<=50)){e.estado=Estado.Hambriento;}
             else if (e.edad>5 & e.salud<=30 & e.energia<=30){e.estado=Estado.Enojado;}
             else if (e.energia<=15){e.estado=Estado.Cansado;}
-            else if ((e.salud<=0 & e.energia<=0)||(e.edad>=15)){e.estado=Estado.Muerto;}
             else {e.estado=Estado.Neutro;}
             System.out.println("Estado: " + e.estado.getPhrase()+"\n");
             //-------- Lógica del menú encargado de seleccionar objeto a entregar --------// 
