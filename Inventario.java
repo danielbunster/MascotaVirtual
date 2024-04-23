@@ -4,7 +4,7 @@ import java.io.PrintStream;
 import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.ArrayList; 
-// Quizás esta clase s epueda implementar de manera anonima, revisa esa idea
+
 public class Inventario{
     private ArrayList<Item> inventario;  // Se crea un nuevo tipo de variable, el cual se encarga de almacenar los objetos, la lista.
     
@@ -28,7 +28,7 @@ public class Inventario{
     public void buscaID(int id,Mascota e){  // Método encargado de buscar el objeto seleccionado en el menu, y removiendo si se acaba.
         int i=0;
         int remove =-1; 
-        for(Item item : inventario){
+        for(Item item : inventario){ 
             i = i + 1;
             if(id == (item.id)){
                 e.darItem(item);
