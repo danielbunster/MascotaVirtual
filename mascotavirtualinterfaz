@@ -1,0 +1,48 @@
+# Mascota Virtual con interfaz gráfica
+## ¿Qué es Mascota Virtual?
+Mascota virtual es un programa escrito en **Java** que permite que el usuario pueda interactuar con una mascota a través de un menú interactivo, que permite que el usuario realice distintas acciones, como jugar con ella, alimentarla, entregarle medicamentos, entre otros. Mientras el usuario interactue con la mascota, esta irá modificando diferentes atributos(que a su vez modificará su estado de ánimo), que se irán mostrando a través de una interfaz gráfica, de manera que el usuario sepa del estado de su mascota y sepa que acciones realizar para un correcto cuidado. 
+# Instalación y ejecución del programa
+Para ejecutar **Mascota Virtual** es necesario contar con 6 archivos: 
+* Mascota.java
+* App.java
+* Item.java
+* Inventario.java
+* Controller.java
+
+Como la entrega de la tarea se compone de 4 etapas, se procederá a explicar como ejecutar cada una de ellas:
+### Etapa 1 
+En la etapa 1 se crea la interfaz gráfica, la cual contendrá los valores importantes de la mascota.
+
+Para ejecutar la etapa 1, es necesario que el usuario tenga configurado el paquete javaFX, de manera que el compilador reconozca las librerias a utilizar. Hecho esto, basta con ejecutar el archivo App.java, además de tener en la carpeta los siguientes archivos:
+* App.java
+* Mascota.java
+* Item.java
+No es necesario agregar valores en el argumento.
+
+### Etapa 2
+En esta etapa, se vincula la mascota a la interfaz gráfica, de manera que ahora los botones deberían modificar los atributos del animal.
+
+Para ejecutar la etapa 2, es necesario que en la carpeta se encuentre los siguientes archivos:
+	
+* App.java
+* Mascota.java
+* Estado.java
+* Item.java
+* Inventario.java
+
+Es necesario compilar el archivo App.java (recordando la correcta instalación de los archivos de javaFX). No es necesario entregar parámetros en los argumentos.
+
+### Etapa 3
+En la etapa 3 se crea la clase "Controller" la cual se encarga de utilizar el paquete 'Timeline', de manera que la interfaz tendrá una concepción de tiempo contínuo, afectando esto a los atributos de la mascota.
+
+Para ejecutar la etapa 3, es necesario tener los archivos:
+
+* App.java
+* Mascota.java
+* Estado.java
+* Item.java
+* Inventario.java
+* Controller.java
+Es necesario compilar el archivo App. No es necesario entregar parámetros en los argumentos.
+
+### Etapa 4
